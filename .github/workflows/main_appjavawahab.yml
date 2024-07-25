@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy WAR app to Azure Web App - appjavaWahab
+name: Build and deploy WAR app to Azure Web App - AppJavaWahab
 
 on:
   push:
@@ -49,15 +49,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8A680ED465AA49588E3E198A6F5EC6AC }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3A43D711820640FEB91C7755FC96C3A2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1F5036E8933B49AFB890C8620F81D988 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F57BA880934B4DDDA9F92CE900864579 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_68277C9E4BF7458690161A57AE1CF2AF }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AC2018BA17594A2BAE1F82FC8CF022BB }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'appjavaWahab'
+          app-name: 'AppJavaWahab'
           slot-name: 'Production'
           package: '*.war'
           
